@@ -13,8 +13,8 @@ fi
 file_lst=`find $1 -name *.$2`
 for tmpfile in $file_lst
 do 
-	echo $tmpfile
+	#echo $tmpfile
 	newname=$(echo $tmpfile|sed -n "s/${2}/${3}/p")
-	echo $newname
+	#echo $newname
 	mv $tmpfile $newname
 done 
